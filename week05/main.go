@@ -13,6 +13,8 @@ func main() {
 	//inputScore := reader.ReadString('\n')    //1 variable but reader.ReadString returns 2 values
 	//inputScore, err := read.ReadString('\n') // err declared and not used
 	inputScore, err := reader.ReadString('\n') //option 2
-	log.Fatal(err)
+	if err != nil {
+		log.Fatal(err)
+	}
 	fmt.Println(inputScore)
 }
