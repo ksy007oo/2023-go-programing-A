@@ -9,7 +9,8 @@ import (
 )
 
 func main() {
-	texts := "G@ M@ney~"
+	var texts = "G@ M@ney~"
+	// texts := "G@ M@ney~"
 	fmt.Println(texts)
 	r := strings.NewReplacer("@", "o")
 	newTexts := r.Replace(texts)
