@@ -43,7 +43,8 @@ func main() {
 	as := a[0:2]
 	as[1] = "z"
 	// c := append(a, "y")
-	c := append(a, "y", "x")
+	c := append(a, "y", "x") // capacity가 바뀐다. 5 -> 10
+
 	fmt.Println(a, len(a), cap(a))
 	fmt.Println(c, len(c), cap(c))
 
