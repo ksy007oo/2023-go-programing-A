@@ -36,13 +36,25 @@ package main
 import "fmt"
 
 func main() {
-	a := []string{"a", "b", "c", "d"}
-	as := a[:2]
+	a := make([]string, 4, 5) // (타입, 개수, 수용량)
+	a[0] = "a"
+	a[2] = "c"
+	a[3] = "d"
+	as := a[0:2]
 	as[1] = "z"
-	fmt.Println(a) // 원본도 바뀜
-	fmt.Println(as)
+	// c := append(a, "y")
+	c := append(a, "y", "x")
+	fmt.Println(a, len(a), cap(a))
+	fmt.Println(c, len(c), cap(c))
 
-	b := [4]int{4, 3, 2, 1}
-	bs := b[1:3]
-	fmt.Println(bs)
+	// a := []string{"a", "b", "c", "d"}
+	// as := a[:2]
+	// as[1] = "z"
+	// fmt.Println(a) // 원본도 바뀜
+	// fmt.Println(as)
+
+	// b := [4]int{4, 3, 2, 1}
+	// bs := b[1:3]
+	// fmt.Println(bs)
+
 }
